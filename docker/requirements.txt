@@ -1,0 +1,5 @@
+cassandra-driver==3.25.0
+jupyterlab==3.4.3
+ipykernel==6.14.0
+pandas==1.4.2
+sqlalchemy==1.4.37

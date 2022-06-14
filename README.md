@@ -1,1 +1,1 @@
-# datadiver-cassandra
+# Data Modeling with Cassandra
