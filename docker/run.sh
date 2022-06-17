@@ -10,9 +10,9 @@ HOST="localhost"
 NAME="datadiver-cassandra"
 
 # docker application ports
-PORT_DB="9042:9042"
-PORT_WEB="80:80"
+PORT_CASSANDRA="9042:9042"
+PORT_JUPYTER="80:80"
 
 # run the docker image
-cmd=(docker run --name "$NAME" --hostname "$HOST" -p "$PORT_DB" -p "$PORT_WEB" -d "$IMAGE")
+cmd=(docker run --name "$NAME" --hostname "$HOST" -p "$PORT_CASSANDRA" -p "$PORT_JUPYTER" -d "$IMAGE")
 "${cmd[@]}"
