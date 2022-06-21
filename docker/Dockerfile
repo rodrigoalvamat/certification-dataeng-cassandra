@@ -52,5 +52,17 @@ RUN mkdir -p $HOME/.jupyter $HOME/workspace
 COPY ./docker/jupyter_notebook_config.py $HOME/.jupyter/jupyter_notebook_config.py
 WORKDIR $HOME/workspace
 
+# copy project files
+RUN mkdir -p ./data/ ./docs/ ./images/ ./lib
+COPY ./data/ ./data/
+COPY ./docs/ ./docs/
+COPY ./images/ ./images/
+COPY ./lib/ ./lib/
+COPY ./etl.ipynb ./
+COPY ./etl.py ./
+COPY ./LICENSE ./
+COPY ./README.md ./
+RUN sudo chown -R $USER:$USER $HOME
+
 # container init script
 CMD [ "/opt/app/bin/init.sh" ]
