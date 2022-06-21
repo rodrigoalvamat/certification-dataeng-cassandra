@@ -14,7 +14,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--sourcedir', help='Relative path to the CSV data source directory - default: data/event_data', default='data/event_data')
     parser.add_argument(
-        '--targetfile', help='Relative path to the target CSV file - default: events_datafile_new.csv', default='event_datafile_new.csv')
+        '--targetfile', help='Relative path to the target CSV file - default: event_data_new.csv', default='event_data_new.csv')
     parser.add_argument(
         '--hostname', help='Apache Cassandra hostname - default: 127.0.0.1', default='127.0.0.1')
     parser.add_argument(

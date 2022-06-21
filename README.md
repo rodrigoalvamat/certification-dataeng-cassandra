@@ -105,7 +105,7 @@ The table below shows the sequence of the ETL pipeline processes:
 
 <br/>
 
-**Note:** Take a look at notebook [etl.ipybn](./etl.ipynb) to see the step-by-step development of each ETL process described above.
+**Note:** Take a look at the notebook [etl.ipybn](./etl.ipynb) to see the step-by-step development of each ETL process described above.
 
 <br/>
 
