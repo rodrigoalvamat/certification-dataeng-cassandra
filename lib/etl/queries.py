@@ -23,23 +23,23 @@ WHERE song = 'All Hands Against His Own'
 
 table_songplay_by_session = """
 CREATE TABLE IF NOT EXISTS songplayBySession
-(artist text, song text, length float,
-sessionId int, itemInSession int,
-PRIMARY KEY ((sessionId, itemInSession)))
+(sessionId int, itemInSession int,
+artist text, song text, length float,
+PRIMARY KEY (sessionId, itemInSession))
 """
 
 table_songplay_by_user = """
 CREATE TABLE IF NOT EXISTS songplayByUser
-(artist text, song text, firstName text, lastName text,
-userId int, sessionId int, itemInSession int,
+(userId int, sessionId int, itemInSession int,
+artist text, song text, firstName text, lastName text,
 PRIMARY KEY ((userId, sessionId), itemInSession))
 """
 
 table_songplay_by_song = """
 CREATE TABLE IF NOT EXISTS songplayBySong
-(song text, sessionId int, itemInSession int,
+(song text, userId int,
 firstName text, lastName text,
-PRIMARY KEY (song, sessionId, itemInSession))
+PRIMARY KEY (song, userId))
 """
 
 # DROP TABLE QUERIES

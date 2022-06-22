@@ -17,9 +17,9 @@ class Pipeline:
 
     #: The dictionary of all the tables in the pipeline.
     TABLES = {
-        'songplayBySession': ['artist', 'song', 'length', 'sessionId', 'itemInSession'],
-        'songplayByUser': ['artist', 'song', 'firstName', 'lastName', 'userId', 'sessionId', 'itemInSession'],
-        'songplayBySong': ['song', 'sessionId', 'itemInSession', 'firstName', 'lastName']
+        'songplayBySession': ['sessionId', 'itemInSession', 'artist', 'song', 'length'],
+        'songplayByUser': ['userId', 'sessionId', 'itemInSession', 'artist', 'song', 'firstName', 'lastName'],
+        'songplayBySong': ['song', 'userId', 'firstName', 'lastName']
     }
 
     def __init__(self, source, target, host, keyspace):
